@@ -1,0 +1,18 @@
+.navbar {
+    display: inline-flex;
+    width: 100%;
+    justify-content: end;
+    background-color: rgb(44, 44, 44);
+    padding: 15px;
+}
+
+.navbar__titles {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.navbar__titles > h3 {
+    margin-left: 15px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
