@@ -1,3 +1,4 @@
+'use strict';
 const waitDOM = (selector) => {
     return new Promise((resolve) => {
       let el = document.querySelector(selector);
