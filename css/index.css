@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('./section1.css');
-@import url('./section2.css');
-@import url('./section3.css');
-@import url('./section4.css');
+@import url('./home.css');
+@import url('./product.css');
+@import url('./about.css');
+@import url('./contact.css');
+@import url('./grid.css');
+@import url('./card.css');
+@import url('./fade-animation.css');
 
 :root {
     --primary-background: #464646;
     --primary-background-dark: #2c2c2c;
-    --primary-background-light: #5f5f5f;
+    --primary-background-light: #838383;
     --primary-color: #5bb0b3;
     --primary-color-dark: #388f92;
     --primary-color-light: #52b9bd;
 }
-
-html, body {
+html,body {
     font-family: 'Roboto', sans-serif;
     height: 100%;
     min-height: 100%;
@@ -21,31 +23,28 @@ html, body {
     overflow-x: hidden;
     background-color: var(--primary-background);
     opacity: 0.9;
+    color: var(--primary-color);
 }
-
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing:border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 h1 {
     font-weight: bold;
+    font-style: italic;
 }
-
-.home, .product, .about, .section {
+.home,.product,.about,.section {
     height: 100%;
     width: 100%;
 }
-
 .sectionSelector {
     top: 50%;
     position: absolute;
     width: 50px;
     height: 50px;
 }
-
-.sectionSelector > button{
+.sectionSelector>button,.goHome {
     width: 100%;
     border-radius: 50%;
     height: 100%;
@@ -57,40 +56,23 @@ h1 {
     cursor: pointer;
     box-shadow: 0px 1px 0px 1px #000000;
 }
-
-.sectionSelector > button:hover{
+.sectionSelector>button:hover {
     background-color: var(--primary-color-light);
     border-color: var(--primary-color-light);
 }
-
-.sectionSelector .up, .goHome {
+.sectionSelector .up,.goHome {
     background-image: url('../assets/images/up-arrow.png');
 }
-
-.sectionSelector .down{
+.sectionSelector .down {
     background-image: url('../assets/images/down-arrow.png');
 }
-
-.container {
-    height: 100%;
-}
-
 .goHome {
-    border-radius: 50%;
     width: 50px;
     height: 50px;
-    padding: 0;
-    margin: 0;
-    background-position: center;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    cursor: pointer;
-    box-shadow: 0px 1px 0px 1px #000000;
     position: absolute;
     right: 25px;
     bottom: 25px;
 }
-
 .hidden {
     display: none;
 }

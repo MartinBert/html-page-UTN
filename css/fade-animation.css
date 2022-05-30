@@ -1,0 +1,44 @@
+.fade-light{
+    animation: fade_background_light 0.5s linear;
+    -o-animation: fade_background_light 0.5s linear; 
+    -ms-animation: fade_background_light 0.5s linear; 
+    -moz-animation: fade_background_light 0.5s linear; 
+    -webkit-animation: fade_background_light 0.5s linear;
+}
+.fade-dark{
+    animation: fade_background_dark 0.5s linear;
+    -o-animation: fade_background_dark 0.5s linear; 
+    -ms-animation: fade_background_dark 0.5s linear; 
+    -moz-animation: fade_background_dark 0.5s linear; 
+    -webkit-animation: fade_background_dark 0.5s linear;
+}
+.fade-opacity-in {
+    animation: fade_opacity_in 0.5s linear;
+    -o-animation: fade_opacity_in 0.5s linear; 
+    -ms-animation: fade_opacity_in 0.5s linear; 
+    -moz-animation: fade_opacity_in 0.5s linear; 
+    -webkit-animation: fade_opacity_in 0.5s linear;
+}
+.fade-opacity-out{
+    animation: fade_opacity_out 0.5s linear;
+    -o-animation: fade_opacity_out 0.5s linear; 
+    -ms-animation: fade_opacity_out 0.5s linear; 
+    -moz-animation: fade_opacity_out 0.5s linear; 
+    -webkit-animation: fade_opacity_out 0.5s linear;
+}
+@keyframes fade_background_dark {
+    from {background-color: var(--primary-background-light);}
+    to {background-color: var(--primary-background-dark);}
+}
+@keyframes fade_background_light {
+    from {background-color: var(--primary-background-dark);}
+    to {background-color: var(--primary-background-light);}
+}
+@keyframes fade_opacity_in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fade_opacity_out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
