@@ -19,7 +19,7 @@ class ResponsiveData {
     }
 }
 
-const modifyClasses = (responsiveScale) => {
+const applyScale = (responsiveScale) => {
     const {scale, scaleWithoutEffect, elementsToResize} = new ResponsiveData(responsiveScale);
     for(let i = 0; i < elementsToResize.length; i++) {
         scaleWithoutEffect.forEach(attribute => {
@@ -32,22 +32,22 @@ const modifyClasses = (responsiveScale) => {
 
 const resize = () => {
     if(xs){
-        modifyClasses('xs');
+        applyScale('xs');
     }
     if(sm){
-        modifyClasses('sm');
+        applyScale('sm');
     }
     if(md){
-        modifyClasses('md');
+        applyScale('md');
     }
     if(lg){
-        modifyClasses('lg');
+        applyScale('lg');
     }
     if(xl){
-        modifyClasses('xl');
+        applyScale('xl');
     }
 }
 
 setTimeout(() => {
     resize();
-},100)
+}, 100);

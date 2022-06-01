@@ -1,7 +1,7 @@
 'use strict'
 import helpers from './helpers/index.js';
 import './sections/index.js';
-import './helpers/resoponsive-manager.js';
+import './helpers/responsive-manager.js';
 
 const {fetchComponents} = helpers.componentManager;
 const {moveSectionById, moveSectionByClassName} = helpers.sectionSelector;
