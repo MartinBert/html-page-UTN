@@ -1,12 +1,13 @@
 'use strict'
 import helpers from '../helpers/index.js';
 
-const {fetchComponents, fetchComponent} = helpers.componentManager;
+const {fetchComponents} = helpers.componentManager;
 const {moveSectionByClassName} = helpers.sectionSelector;
 const {waitDOM} = helpers.DOMMutationsDetector;
 
 const components = [
     {url: '../../sections/home/navbar.html', componentContainerClass: '.navbar'},
+    {url: '../../sections/home/story.html', componentContainerClass: '.story'},
     {url: '../../sections/home/carousel.html', componentContainerClass: '.carousel'},
 ]
 
@@ -56,17 +57,19 @@ waitDOM('.navbar').then(() => {
 })
 
 waitDOM('.card').then(card => {
-    console.log(card);
+    const cardText = document.querySelector('.card-text');
     const setCardData = (cardData) => {
         card.innerHTML = `
             <h1>${cardData.title}</h1> 
-            <img src="${cardData.image}" alt="${cardData.alt}" width="100%">
+            <img src="${cardData.image}" alt="${cardData.alt}" style="width: 100%; height: 100;">
         `
+        cardText.innerHTML = `<p>${cardData.text}</p>`
     }
     setCardData(currentCard);
 
     const changeCard = () => {
         card.className = 'card card-dark fade-dark fade-opacity-out'
+        cardText.innerHTML = '';
         setTimeout(() => {
             card.className = 'card card-light fade-light'
             currentCard = (currentCard.id !== 4) ? currentCard = cards.find(cardInList => cardInList.id === currentCard.id + 1) : cards[0];

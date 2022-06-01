@@ -6,24 +6,17 @@
 @import url('./grid.css');
 @import url('./card.css');
 @import url('./fade-animation.css');
+@import url('./colors.css');
 
-:root {
-    --primary-background: #464646;
-    --primary-background-dark: #2c2c2c;
-    --primary-background-light: #838383;
-    --primary-color: #5bb0b3;
-    --primary-color-dark: #388f92;
-    --primary-color-light: #52b9bd;
-}
 html,body {
     font-family: 'Roboto', sans-serif;
     height: 100%;
     min-height: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: var(--primary-background);
+    background-color: var(--primary);
     opacity: 0.9;
-    color: var(--primary-color);
+    color: var(--font);
 }
 * {
     margin: 0;
@@ -51,14 +44,14 @@ h1 {
     padding: 0;
     margin: 0;
     background-position: center;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
     cursor: pointer;
     box-shadow: 0px 1px 0px 1px #000000;
 }
 .sectionSelector>button:hover {
-    background-color: var(--primary-color-light);
-    border-color: var(--primary-color-light);
+    background-color: var(--secondary-light);
+    border-color: var(--secondary-light);
 }
 .sectionSelector .up,.goHome {
     background-image: url('../assets/images/up-arrow.png');
@@ -75,4 +68,8 @@ h1 {
 }
 .hidden {
     display: none;
+}
+.container {
+    display: block;
+    padding: 3%;
 }
