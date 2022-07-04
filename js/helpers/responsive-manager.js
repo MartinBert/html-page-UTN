@@ -21,6 +21,7 @@ class ResponsiveData {
 
 const applyScale = (responsiveScale) => {
     const {scale, scaleWithoutEffect, elementsToResize} = new ResponsiveData(responsiveScale);
+    console.log(scale)
     for(let i = 0; i < elementsToResize.length; i++) {
         scaleWithoutEffect.forEach(attribute => {
             const classPresent = elementsToResize[i].getAttribute(attribute);
