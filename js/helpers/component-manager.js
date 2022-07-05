@@ -18,9 +18,19 @@ const fetchComponents = (componentToLoadList) => {
     
 }
 
+const fetchHtml = async(fileUrl) => {
+    try{
+        const data = await fetch(fileUrl);
+        return await data.text();
+    }catch(err){
+        console.log(err)
+    }
+}
+
 const componentManager = {
     fetchComponent,
-    fetchComponents
+    fetchComponents,
+    fetchHtml
 }
 
 export default componentManager;
