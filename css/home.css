@@ -1,21 +1,3 @@
-.navbar {
-    display: inline-flex;
-    width: 100%;
-    height: 6%;
-    justify-content: end;
-    background-color: var(--primary-darkest);
-    padding: 15px;
-}
-
-.navbar__titles {
-    display: inline-flex;
-    justify-content: space-between;
-}
-
-.navbar__titles > h3 {
-    margin-left: 15px;
-    cursor: pointer;
-}
 .carousel{
     height: 47%;
 }

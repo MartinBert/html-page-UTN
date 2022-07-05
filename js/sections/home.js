@@ -2,14 +2,17 @@
 import helpers from '../helpers/index.js';
 
 const {fetchComponents, fetchHtml} = helpers.componentManager;
-const {moveSectionByClassName} = helpers.sectionSelector;
 const {waitDOM} = helpers.DOMMutationsDetector;
 
 const components = [
-    {url: '../../sections/home/navbar.html', componentContainerClass: '.navbar'},
     {url: '../../sections/home/story.html', componentContainerClass: '.story'},
     {url: '../../sections/home/carousel.html', componentContainerClass: '.carousel'},
 ]
+
+waitDOM('.story')
+.then(() => {
+    fetchComponents(components)
+})
 
 const cards = [
   {
@@ -54,18 +57,6 @@ const cards = [
 ];
 
 let currentCard = cards[0];
-
-waitDOM('.navbar').then(() => {
-    fetchComponents(components)
-    waitDOM('.navbar__titles').then((res) => {
-        const titles = res.children;
-        for(let i = 0; i < titles.length; i++) {
-            titles[i].addEventListener('click', () => {
-                moveSectionByClassName(titles[i].innerText);
-            })
-        }
-    })
-})
 
 waitDOM('.card').then(card => {
     const cardText = document.querySelector('.card-text');
