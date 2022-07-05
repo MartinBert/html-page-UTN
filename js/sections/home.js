@@ -71,7 +71,7 @@ waitDOM('.card').then(card => {
         card.className = 'card card-dark fade-dark fade-opacity-out'
         cardText.innerHTML = '';
         setTimeout(() => {
-            card.className = 'card card-light fade-light'
+            card.className = 'card card-light fade-light fade-opacity-in'
             currentCard = (currentCard.id !== 4) ? currentCard = cards.find(cardInList => cardInList.id === currentCard.id + 1) : cards[0];
             setCardData(currentCard);
         }, 475)
