@@ -81,7 +81,7 @@ waitDOM('.card').then(card => {
     const changeCard = async() => {
         card.className = 'card card-dark fade-dark fade-opacity-out'
         cardText.className = 'card-text fade-opacity-out'
-        cardText.innerHTML = '<div>' + await fetchHtml('../../sections/home/spinner.svg') + '</div>';
+        cardText.innerHTML = '<div>' + await fetchHtml('../../assets/images/spinner.svg') + '</div>';
         setTimeout(() => {
             card.className = 'card card-light fade-light fade-opacity-in'
             cardText.className = 'card-text fade-opacity-in'
