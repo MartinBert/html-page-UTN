@@ -10,15 +10,14 @@ const {waitDOM} = helpers.DOMMutationsDetector;
 const dictionary = {
     Inicio: 'home',
     Empresas: 'business',
-    About: 'about',
-    Contact: 'contact'
+    Sitios: 'sites',
 }
 
 window.addEventListener('load', () => { 
     const sections = [
         {url: '../sections/home/home.html', componentContainerClass: '.home'},
         {url: '../sections/business/business.html', componentContainerClass: '.business'},
-        {url: '../sections/about/about.html', componentContainerClass: '.about'},
+        {url: '../sections/sites/sites.html', componentContainerClass: '.sites'},
         {url: '../sections/contact/contact.html', componentContainerClass: '.contact'},
         {url: './navbar.html', componentContainerClass: '.navbar'}
     ];

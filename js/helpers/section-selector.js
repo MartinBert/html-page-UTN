@@ -10,8 +10,7 @@ const displayOrNotGoToHomeButton = () => {
 const allSections = [
     {id: 1, name: 'home'},
     {id: 2, name: 'business'},
-    {id: 3, name: 'about'},
-    {id: 4, name: 'contact'},
+    {id: 3, name: 'sites'},
 ]
 
 let currentSection = allSections[0];
