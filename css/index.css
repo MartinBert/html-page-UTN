@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('./home.css');
-@import url('./languages.css');
+@import url('./business.css');
 @import url('./about.css');
 @import url('./contact.css');
 @import url('./grid.css');
@@ -27,7 +27,7 @@ h1 {
     font-weight: bold;
     font-style: italic;
 }
-.home,.languages,.about,.section {
+.home,.business,.about,.section {
     height: 100%;
     width: 100%;
     padding-left: 50px;

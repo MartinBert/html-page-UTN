@@ -7,10 +7,17 @@ const {fetchComponents} = helpers.componentManager;
 const {moveSectionById, moveSectionByClassName} = helpers.sectionSelector;
 const {waitDOM} = helpers.DOMMutationsDetector;
 
+const dictionary = {
+    Inicio: 'home',
+    Empresas: 'business',
+    About: 'about',
+    Contact: 'contact'
+}
+
 window.addEventListener('load', () => { 
     const sections = [
         {url: '../sections/home/home.html', componentContainerClass: '.home'},
-        {url: '../sections/languages/languages.html', componentContainerClass: '.languages'},
+        {url: '../sections/business/business.html', componentContainerClass: '.business'},
         {url: '../sections/about/about.html', componentContainerClass: '.about'},
         {url: '../sections/contact/contact.html', componentContainerClass: '.contact'},
         {url: './navbar.html', componentContainerClass: '.navbar'}
@@ -34,7 +41,7 @@ window.addEventListener('load', () => {
                     titles[i].classList.add('active_nav');
                 }
                 titles[i].addEventListener('click', () => {
-                    moveSectionByClassName(titles[i].innerText);
+                    moveSectionByClassName(dictionary[titles[i].innerText]);
                 })
             }
         })

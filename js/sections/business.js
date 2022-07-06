@@ -4,11 +4,11 @@ import helpers from '../helpers/index.js'
 const {fetchHtml} = helpers.componentManager;
 const {waitDOM} = helpers.DOMMutationsDetector;
 
-waitDOM('.carousel-languages')
-.then(carouselLanguages => {
-  fetchHtml('../../sections/languages/carousel-languages.html')
+waitDOM('.carousel-business')
+.then(carouselbusiness => {
+  fetchHtml('../../sections/business/carousel-business.html')
   .then(html => {
-    carouselLanguages.innerHTML = html;
+    carouselbusiness.innerHTML = html;
     let slideIndex = 1;
   
     const plusSlides = (n) => {

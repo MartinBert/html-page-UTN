@@ -1,5 +1,5 @@
 'use strict'
 import './home.js';
-import './languages.js';
+import './business.js';
 import './about.js';
 import './contact.js';

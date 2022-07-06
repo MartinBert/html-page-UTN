@@ -2,6 +2,8 @@
     max-width: 100%;
     position: relative;
     margin: auto;
+    box-shadow: 5px 5px 2px var(--primary-dark);
+    border-radius: 3px;
 }
 .prev,
 .next {
@@ -11,7 +13,7 @@
     width: auto;
     padding: 16px;
     margin-top: -22px;
-    color: white;
+    color: var(--font);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -27,8 +29,10 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 .text {
+    background-color:rgba(0, 0, 0, 0.8);
     color: var(--font);
     font-size: 15px;
+    font-weight: bold;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -38,6 +42,7 @@
 .numbertext {
     color: var(--font);
     font-size: 12px;
+    font-weight: bold;
     padding: 8px 12px;
     position: absolute;
     top: 0;
