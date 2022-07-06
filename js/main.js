@@ -10,7 +10,7 @@ const {waitDOM} = helpers.DOMMutationsDetector;
 window.addEventListener('load', () => { 
     const sections = [
         {url: '../sections/home/home.html', componentContainerClass: '.home'},
-        {url: '../sections/product/product.html', componentContainerClass: '.product'},
+        {url: '../sections/languages/languages.html', componentContainerClass: '.languages'},
         {url: '../sections/about/about.html', componentContainerClass: '.about'},
         {url: '../sections/contact/contact.html', componentContainerClass: '.contact'},
         {url: './navbar.html', componentContainerClass: '.navbar'}
@@ -30,6 +30,9 @@ window.addEventListener('load', () => {
         waitDOM('.navbar__titles').then((res) => {
             const titles = res.children;
             for(let i = 0; i < titles.length; i++) {
+                if(titles[i].className === 'title1'){
+                    titles[i].classList.add('active_nav');
+                }
                 titles[i].addEventListener('click', () => {
                     moveSectionByClassName(titles[i].innerText);
                 })
